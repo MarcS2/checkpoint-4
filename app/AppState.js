@@ -26,6 +26,8 @@ class ObservableAppState extends EventEmitter {
 
   activeQuote = {}
 
+  weather = {}
+
   totalIncompleteTodos = 0
 
   // Used to load initial data
