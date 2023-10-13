@@ -3,7 +3,7 @@ import { Value } from './models/Value.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
 import { loadState } from './utils/Store.js'
-
+import { Image } from "./models/Image.js"
 class ObservableAppState extends EventEmitter {
   page = ''
   user = null
@@ -18,6 +18,15 @@ class ObservableAppState extends EventEmitter {
    * @type {import('./models/Todo.js').Todo[]}
    */
   todoList = []
+
+
+
+  activeBgImg = {}
+
+
+  activeQuote = {}
+
+  totalIncompleteTodos = 0
 
   // Used to load initial data
   init() {

@@ -1,1 +1,23 @@
 /* BASIC STYLES HERE */
+body {
+  height: 100%;
+}
+
+.deleteButton {
+  font-size: 2em;
+}
+
+.bgImg {
+  /* background-image: url(https://pixabay.com/get/g6383b3b1edce2c49cf826f1c7845879c14208bd3b30ece0fde0e97eec49bbe0bec79f5451fdefc16f653acbdc8a977585641de614d82f14f7ce42bee199d746a_1280.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.glass-card {
+  background-color: rgba(0, 0, 0, 0.314);
+
+
+
+}

@@ -15,26 +15,24 @@
   <title>checkpoint-4</title>
 </head>
 
-<body>
+<body class="bgImg " id="bgImg">
   <!-- SECTION -->
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
-      <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">checkpoint-4</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
-        </div>
+  <header class="container-fluid ">
+    <nav class="navbar navbar-dark navbar-expand glass-card text-light px-2 row">
+      <div class="col-4">
+
+        </button>
+
       </div>
-      <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+      <div class="col-4 text-center">
+        <p class="fs-3 fw-bold mb-0" id="clock"></p>
+      </div>
+      <div class="col-4">
+        <div class="flex-grow-1 justify-content-end align-items-center d-flex text-end" id="authstate"></div>
+
+      </div>
+
+
     </nav>
   </header>
 
@@ -47,10 +45,10 @@
       <!-- primary viewport -->
       <div class="container-fluid">
         <section class="row">
-          <div class="col-10 text-start">
-            <p>Image by: </p>
+          <div class="col-9 text-start" id="imgAuthor">
+            <!-- <p class="fs-2">Image by: ${this.author}</p> -->
           </div>
-          <div class="col-2 text-end">
+          <div class="col-3 text-end">
             <section class="row" id="todoButton">
               <!-- <div class="col-12 text-start">
                 <p class="p-2"><i class="mdi mdi-chevron-down fs-4"></i>Todo's: <span id="todoCount">0</span></p>
@@ -59,9 +57,16 @@
               <div class="col-12">
                 <form class="text-start">
                   <label for="todo" class="d-block ms-4">New Todo</label>
-                  <input type="text" id="todo" name="description" class="ms-4">
+                  <input type="text" id="todo" name="description" class="ms-4" style="width: 70%;">
                   <button class="btn btn-success"><i class="mdi mdi-plus"></i></button>
                 </form>
+                <div id="todoList" class="text-start ms-4 mt-2">
+                  <div>
+                    <p class="d-inline"><span><i class="mdi mdi-checkbox-blank-outline fs-5"></i></span>
+                      {this.description}</p>
+                    <button class="btn btn-danger fs-6"><i class="mdi mdi-delete-empty"></i></button>
+                  </div>
+                </div>
               </div> -->
 
             </section>
@@ -75,9 +80,7 @@
 
   <!-- SECTION -->
   <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-    </div>
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
