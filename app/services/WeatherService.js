@@ -6,14 +6,14 @@ class WeatherService {
     let F = 0
     const tempK = AppState.weather.main.temp
     F = ((tempK - 273.15) * 1.8) + 32
-    return F
+    return Math.floor(F)
   }
 
   get calculateCelsius() {
     let C = 0
     const tempK = AppState.weather.main.temp
     C = tempK - 273.15
-    return C
+    return Math.floor(C)
   }
   async getWeather() {
     const res = await api.get('api/weather')

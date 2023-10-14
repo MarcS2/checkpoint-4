@@ -19,12 +19,7 @@
   <!-- SECTION -->
   <header class="container-fluid ">
     <nav class="navbar navbar-dark navbar-expand glass-card text-light px-2 row">
-      <div class="col-4 fs-4">
-        <img type="button" onclick="app.WeatherController.TempPicker()" src="https://openweathermap.org/img/wn/04d.png"
-          , alt="">
-        <p class="d-inline"><span id="current-temp"></span><i class="mdi mdi-temperature-celsius"></i></p>
-        <p class="d-inline"><span id="current-temp"></span><i class="mdi mdi-temperature-fahrenheit"></i></p>
-
+      <div class="col-4 fs-4" id="active-temp">
 
       </div>
       <div class="col-4 text-center">
@@ -49,11 +44,11 @@
       <div class="container-fluid">
         <section class="row">
           <div class="col-9 text-start" id="imgAuthor">
-            <!-- <p class="fs-2">Image by: ${this.author}</p> -->
+
           </div>
-          <div class="col-3 text-end">
-            <section class="row" id="todoButton">
-              <!-- <div class="col-12 text-start">
+          <div class="col-3 text-end" id="glass-box">
+            <section class="row justify-content-end button-card rounded mt-4" id="todoButton">
+              <!-- <div class="col-12 text-start  ">
                 <p class="p-2"><i class="mdi mdi-chevron-down fs-4"></i>Todo's: <span id="todoCount">0</span></p>
 
               </div>

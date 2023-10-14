@@ -31,8 +31,14 @@ body {
 }
 
 .glass-card {
-  background-color: rgba(0, 0, 0, 0.314);
+  background-color: rgba(0, 0, 0, 0.582);
 
 
 
+}
+
+
+
+.button-card {
+  background-color: rgba(0, 0, 0, 0.582)
 }

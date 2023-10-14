@@ -15,6 +15,7 @@ function _drawTodoList() {
 
 
 function _drawTodoButton() {
+  setHTML('glass-box', `<section class="row justify-content-end mt-4" id="todoButton"> </section>`)
   setHTML('todoButton', Todo.todoToggleClosed)
   setTodoCount()
 }
@@ -25,6 +26,7 @@ function setTodoCount() {
 
 
 function _drawOpenTodoButton() {
+  setHTML('glass-box', `<section class="row justify-content-end button-card rounded mt-4" id="todoButton"> </section>`)
   setHTML('todoButton', Todo.todoToggleOpen)
   setText('todoCount', AppState.totalIncompleteTodos)
   _drawTodoList()

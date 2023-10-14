@@ -10,8 +10,8 @@ export class Todo {
 
 
   static get todoToggleClosed() {
-    return `<div class="col-12 text-end text-white">
-    <p class="p-2" type="button" title="Open Todo's" onclick="app.TodosController.toggleTodosOpen()"><i class="mdi mdi-less-than fs-6"></i> Todo's: <span id="todoCount">0</span></p>
+    return `<div class="col-4 text-white justify mt-4">
+    <p class=" button-card text-center rounded" type="button" title="Open Todo's" onclick="app.TodosController.toggleTodosOpen()"><i class="mdi mdi-less-than fs-6"></i> Todo's: <span id="todoCount">0</span></p>
 
   </div>`
   }
@@ -40,10 +40,10 @@ export class Todo {
   static get todoToggleOpen() {
 
     return `<div class="col-12 text-start text-white">
-    <p class="p-2" type="button" title="Close Todo's" onclick="app.TodosController. toggleTodosClosed()"><i class="mdi mdi-chevron-down fs-4"></i>Todo's: <span id="todoCount">0</span></p>
+    <p class="" type="button" title="Close Todo's" onclick="app.TodosController. toggleTodosClosed()"><i class="mdi mdi-chevron-down fs-4"></i>Todo's: <span id="todoCount">0</span></p>
 
   </div>
-  <div class="col-12 text-white">
+  <div class="col-12 text-white rounded">
     <form class="text-start" onsubmit="app.TodosController.createNewTodo(event)">
       <label for="description" class="d-block ms-4">New Todo</label>
       <input type="text" id="description" name="description" class="ms-4" style="width: 70%;" placeholder="Todo here...">
