@@ -5,7 +5,7 @@ import { setHTML } from "../utils/Writer.js";
 
 
 function _drawActiveQuote() {
-  setHTML('quote', `<p class="fs-2 text-white text-center quote">${AppState.activeQuote.content}</p>
+  setHTML('quote', `<p class="fs-2 text-white text-center quote ">${AppState.activeQuote.content}</p>
   <p class="fs-4 text-white text-center author">${AppState.activeQuote.author}</p>`)
 }
 

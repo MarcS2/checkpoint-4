@@ -18,11 +18,13 @@ export class Todo {
 
 
   get computeTodoState() {
-    if (this.completed == false) {
+    if (!this.completed) {
       return `
-      <i class="mdi mdi-checkbox-blank-outline fs-5"></i>`
+      <p class="d-inline" type="button" onclick="app.TodosController.completeTodo('${this.id}')"><i class="mdi mdi-checkbox-blank-outline fs-5"></i>
+                      ${this.description}</p>`
     } else if (this.completed) {
-      return `<i class="mdi mdi-checkbox-outline fs-5"></i>
+      return `<p class="d-inline" type="button" onclick="app.TodosController.completeTodo('${this.id}')" style="opacity: .5 ; text-decoration: line-through; "><i class="mdi mdi-checkbox-outline fs-5"  ></i>
+      ${this.description}</p>
       `
     }
   }
@@ -30,8 +32,7 @@ export class Todo {
   get todoList() {
     return `
     <div class="text-white">
-                    <p class="d-inline" type="button" onclick="app.TodosController.completeTodo('${this.id}')"><span>${this.computeTodoState}</span>
-                      ${this.description}</p>
+                    ${this.computeTodoState}
                     <button class="btn btn-danger fs-6 p-1 ms-2" onclick="app.TodosController.deleteTodo('${this.id}')"><i class="mdi mdi-delete-empty"></i></button>
                   </div>
     `
